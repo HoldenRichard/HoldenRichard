@@ -17,4 +17,4 @@ The rest, roughly in the order I would show them:
 
 Swift, Python and TypeScript mostly, C++ when it matters.  Six Claude Academy certifications from Anthropic, if that sort of thing is useful to you.
 
-[LinkedIn](https://linkedin.com/in/holden-richard) · hgrichar@uvm.edu
+[holdenrichard.com](https://holdenrichard.com) · [LinkedIn](https://linkedin.com/in/holden-richard) · hgrichar@uvm.edu
