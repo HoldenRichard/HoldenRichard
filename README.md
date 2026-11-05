@@ -24,7 +24,7 @@ Because the app source is private, the public repo serves as the architectural c
 
 | Project | Focus | Stack | Proof / Signal |
 | :--- | :--- | :--- | :--- |
-| **[caselaw](https://github.com/HoldenRichard/caselaw)** [![npm](https://img.shields.io/npm/v/caselaw.svg?color=24292e&label=npm)](https://www.npmjs.com/package/caselaw) | Zero-dependency governance engine: SkillOpt (arXiv:2605.23904) Pareto rule evolution, automated prose-to-machine gate synthesis, and trigger-scoped routing | JavaScript, npm, Shell | 833 tests (380 positive controls); every mechanism verified by positive control |
+| **[caselaw](https://github.com/HoldenRichard/caselaw)** [![npm](https://img.shields.io/npm/v/caselaw.svg?color=24292e&label=npm)](https://www.npmjs.com/package/caselaw) | Zero-dependency governance engine: SkillOpt (arXiv:2605.23904) Pareto rule evolution, automated prose-to-machine gate synthesis, and trigger-scoped routing | JavaScript, npm, Shell | 837 tests (384 positive controls); every mechanism verified by positive control |
 | **[governance-research-regime](https://github.com/HoldenRichard/governance-research-regime)** | Logging protocol: session logs, defect ledger, attestation register, CI gate | Python, GitHub Actions | 6-promise attestation register; protocol powering the 171-session AUT study |
 | **[self-taught-operator](https://github.com/HoldenRichard/self-taught-operator)** | Continual-learning agent that teaches itself NandGame and compiles reusable skills | Python, Gemini Computer Use, Playwright, MongoDB Atlas, Voyage AI | Beat 5/5 tested levels across repeated loop runs (AIEWF Hackathon 2026) |
 
