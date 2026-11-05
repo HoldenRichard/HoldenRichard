@@ -1,6 +1,6 @@
 # Holden Richard
 
-Computer Science at the University of Vermont (B.S. 2027, M.S. Complex Systems and Data Science 2028). Spending this semester at Auckland University of Technology in New Zealand.
+Computer Science at the University of Vermont (B.S. 2027, M.S. Complex Systems and Data Science 2028), based in Burlington, VT.
 
 I build things and then keep score on them. Most of the code in my iOS app was written with an AI coding agent, and the interesting problem turned out to be everything around that: how you stay accountable for what ships when you did not type it, which mistakes a machine can catch before they land, and which ones still need a person. That is what my research is about, and it is what most of the repos below are for.
 
