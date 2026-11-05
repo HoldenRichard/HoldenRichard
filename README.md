@@ -1,20 +1,51 @@
 # Holden Richard
 
-Computer science at the University of Vermont, class of 2027, with a master's in Complex Systems and Data Science stacked on top for 2028.  Spending this semester at Auckland University of Technology in New Zealand.
+Computer Science at the University of Vermont (B.S. 2027, M.S. Complex Systems and Data Science 2028). Spending this semester at Auckland University of Technology in New Zealand.
 
-I build things and then keep score on them.  Most of the code in my iOS app was written with an AI coding agent, and the interesting problem turned out to be everything around that, how you stay accountable for what ships when you did not type it, which mistakes a machine can catch before they land, and which ones still need a person.  That is what my research is about, and it is what most of the repos below are for.
+I build things and then keep score on them. Most of the code in my iOS app was written with an AI coding agent, and the interesting problem turned out to be everything around that: how you stay accountable for what ships when you did not type it, which mistakes a machine can catch before they land, and which ones still need a person. That is what my research is about, and it is what most of the repos below are for.
 
-**Kabu** is a stock market education app for iOS, built alone under my LLC and now in App Store review.  Twenty-five quiz-gated lessons, historical market simulations, and a paper-trading sandbox that benchmarks you against the S&P 500, including when you lose.  The app source is private.  [Kabu](https://github.com/HoldenRichard/Kabu) is the public case study and the site is [learnkabu.com](https://learnkabu.com).
+### Flagship Testbed & Research Telemetry
 
-The rest, roughly in the order I would show them:
+**[Kabu](https://github.com/HoldenRichard/Kabu)** ([learnkabu.com](https://www.learnkabu.com/)) is a gamified iOS stock-market education app built solo under my LLC and currently in App Store review. It features 25 quiz-gated lessons, 4 historical market simulations, a 100-ticker S&P 500 paper-trading sandbox, and an end-to-end StoreKit 2 / App Store Server API JWS validation stack (~800ms in production).
 
-- [caselaw](https://github.com/HoldenRichard/caselaw) installs verification guardrails into a repository that uses AI coding agents and enforces them through Claude Code hooks.  Every check carries a positive control proving it fails on bad input before anyone is allowed to trust it.
-- [governance-research-regime](https://github.com/HoldenRichard/governance-research-regime) is the logging protocol behind my research, with session logs, a defect and near-miss ledger, an attestation register, and an integrity gate that runs in CI.
-- [self-taught-operator](https://github.com/HoldenRichard/self-taught-operator) is an agent that teaches itself a logic-circuit game and compiles its own reusable skills at runtime.  Built in about a day at the AI Engineer World's Fair hackathon.
-- [LoanLens](https://github.com/HoldenRichard/LoanLens) is a student loan analytics platform from the UVM SWICS hackathon, first in fintech and second overall.
-- [TradeSim](https://github.com/HoldenRichard/TradeSim) is a real-time 3D trading simulator in C++ and OpenGL, from before I knew any Swift.
-- [sms-enforcer-public](https://github.com/HoldenRichard/sms-enforcer-public) is an event-sourced SMS lead-response SaaS for home-service businesses.
+Because the app source is private, the public repo serves as the architectural case study and hosts the telemetry from my semester-long AI engineering study ([holdenrichard.com](https://www.holdenrichard.com/)):
 
-Swift, Python and TypeScript mostly, C++ when it matters.  Six Claude Academy certifications from Anthropic, if that sort of thing is useful to you.
+| Metric | Count | Verification Scope |
+| :--- | :--- | :--- |
+| **Logged Agent Sessions** | 171 | Structured prompt turns, review loops, and multi-agent handoffs |
+| **Defect & Near-Miss Ledger** | 628 | 280 defects and 348 near-misses logged across 18 fields at detection turn |
+| **Enforced Rules & CI Gates** | 49 | Repeat failure modes codified into repo rules and automated CI checks |
+| **Attestation Promises** | 6 | Privacy, policy, and App Store label claims audited against live behavior |
+| **Automated Test Suite** | 419 | Unit, regression, and StoreKit 2 / Firestore security rule verification |
 
-[holdenrichard.com](https://holdenrichard.com) · [LinkedIn](https://linkedin.com/in/holden-richard) · hgrichar@uvm.edu
+---
+
+### AI Agent Governance & Research
+
+| Project | Focus | Stack | Proof / Signal |
+| :--- | :--- | :--- | :--- |
+| **[caselaw](https://github.com/HoldenRichard/caselaw)** | Repo-specific verification guardrails enforced via Claude Code hooks | JavaScript, Shell | Every rule carries a positive control proving it fails on bad input |
+| **[governance-research-regime](https://github.com/HoldenRichard/governance-research-regime)** | Logging protocol: session logs, defect ledger, attestation register, CI gate | Python, GitHub Actions | 6-promise attestation register; protocol powering the 171-session AUT study |
+| **[self-taught-operator](https://github.com/HoldenRichard/self-taught-operator)** | Continual-learning agent that teaches itself NandGame and compiles reusable skills | Python, Gemini Computer Use, Playwright, MongoDB Atlas, Voyage AI | Beat 5/5 tested levels across repeated loop runs (AIEWF Hackathon 2026) |
+
+### Shipped Software & Systems
+
+| Project | Focus | Stack | Proof / Signal |
+| :--- | :--- | :--- | :--- |
+| **[Kabu](https://github.com/HoldenRichard/Kabu)** | iOS investing education app case study and multi-agent engineering workflow | Swift, SwiftUI, Firebase, StoreKit 2 | 30+ TestFlight testers; App Store submission ([learnkabu.com](https://www.learnkabu.com/)) |
+| **[LoanLens](https://github.com/HoldenRichard/LoanLens)** | Student loan analytics modeling real repayment and interest trajectories | Python, FastAPI, Kinde OAuth (2FA) | 1st in Fintech, 2nd Overall at UVM SWICS Hackathon (under 48 hrs) |
+| **[TradeSim](https://github.com/HoldenRichard/TradeSim)** | Real-time 3D stock-trading simulator and market visualizer | C++, OpenGL, ImGui | Custom 3D rendering engine built prior to iOS transition |
+| **[sms-enforcer-public](https://github.com/HoldenRichard/sms-enforcer-public)** | Event-sourced SMS lead-response SaaS for home-service businesses | Python, FastAPI, PostgreSQL, Redis | Outbox pattern, idempotent message dispatch, webhook lifecycle |
+
+---
+
+### Stack & Credentials
+
+- **Languages:** Swift, Python, TypeScript, JavaScript, C++, SQL
+- **Frameworks & Data:** SwiftUI, FastAPI, Flask, React, Next.js, PostgreSQL, Cloud Firestore, Redis, SQLite
+- **Infra, Security & AI:** Docker, GitHub Actions, Firebase Cloud Functions, OAuth/JWT, App Attest, Claude Code, Gemini Computer Use
+- **Certifications:** 6x Claude Academy Certifications (Anthropic)
+
+---
+
+[holdenrichard.com](https://www.holdenrichard.com/) · [learnkabu.com](https://www.learnkabu.com/) · [LinkedIn](https://linkedin.com/in/holden-richard) · [hgrichar@uvm.edu](mailto:hgrichar@uvm.edu)
