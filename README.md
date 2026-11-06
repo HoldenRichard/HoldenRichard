@@ -2,49 +2,47 @@
 
 Computer Science at the University of Vermont (B.S. 2027, M.S. Complex Systems and Data Science 2028), based in Burlington, VT.
 
-I build things and then keep score on them. Most of the code in my iOS app was written with an AI coding agent, and the interesting problem turned out to be everything around that: how you stay accountable for what ships when you did not type it, which mistakes a machine can catch before they land, and which ones still need a person. That is what my research is about, and it is what most of the repos below are for.
+I build things and then keep score on them. I built Kabu with AI coding agents. My research examines how a developer stays in control of that work, including which failures can become automated checks and which still need human judgment.
 
-### Flagship Testbed & Research Telemetry
+### Kabu & Study Record
 
-**[Kabu](https://github.com/HoldenRichard/Kabu)** ([learnkabu.com](https://www.learnkabu.com/)) is a gamified iOS stock-market education app built solo under my LLC and currently in App Store review. It features 25 quiz-gated lessons, 4 historical market simulations, a 100-ticker S&P 500 paper-trading sandbox, and an end-to-end StoreKit 2 / App Store Server API JWS validation stack (~800ms in production).
+**[Kabu](https://github.com/HoldenRichard/Kabu)** ([learnkabu.com](https://www.learnkabu.com/)) is a gamified iOS stock-market education app built solo under my LLC and submitted to the App Store in August 2026; not yet released. It features 25 quiz-gated lessons, 4 historical market simulations, a 100-ticker S&P 500 paper-trading sandbox, and server-side StoreKit 2 validation, measured at approximately 800ms in a sandbox purchase.
 
-Because the app source is private, the public repo serves as the architectural case study and hosts the telemetry from my semester-long AI engineering study ([holdenrichard.com](https://www.holdenrichard.com/)):
+Kabu's public repository documents the architecture and build workflow. The empirical study's working paper is at [holdenrichard.com/research](https://www.holdenrichard.com/research) and the logging protocol is documented at [governance-research-regime](https://github.com/HoldenRichard/governance-research-regime).
 
-| Metric | Count | Verification Scope |
+Research counts use the October 16, 2026 analysis snapshot. The app test count was verified August 14, 2026.
+
+| Metric | Count | Scope |
 | :--- | :--- | :--- |
-| **Logged Agent Sessions** | 171 | Structured prompt turns, review loops, and multi-agent handoffs |
-| **Defect & Near-Miss Ledger** | 628 | 280 defects and 348 near-misses logged across 18 fields at detection turn |
-| **Enforced Rules & CI Gates** | 49 | Repeat failure modes codified into repo rules and automated CI checks |
-| **Attestation Promises** | 6 | Privacy, policy, and App Store label claims audited against live behavior |
-| **Automated Test Suite** | 419 | Unit, regression, and StoreKit 2 / Firestore security rule verification |
+| Logged working sessions | 171 | Across the study's projects |
+| Defects and near misses | 628 | 280 defects and 348 near misses; 18-column ledger |
+| Standing rules and gates | 49 | Includes written rules and machine-checkable controls |
+| Attestation promises | 7 | Formal promises tracked against implementation and disclosures |
+| Kabu XCTest methods | 419 | Method declarations counted August 14, 2026 |
 
 ---
 
 ### AI Agent Governance & Research
 
-| Project | Focus | Stack | Proof / Signal |
-| :--- | :--- | :--- | :--- |
-| **[caselaw](https://github.com/HoldenRichard/caselaw)** [![npm](https://img.shields.io/npm/v/caselaw.svg?color=24292e&label=npm)](https://www.npmjs.com/package/caselaw) | Zero-dependency governance engine: SkillOpt (arXiv:2605.23904) Pareto rule evolution, automated prose-to-machine gate synthesis, and trigger-scoped routing | JavaScript, npm, Shell | 837 tests (384 positive controls); every mechanism verified by positive control |
-| **[governance-research-regime](https://github.com/HoldenRichard/governance-research-regime)** | Logging protocol: session logs, defect ledger, attestation register, CI gate | Python, GitHub Actions | 6-promise attestation register; protocol powering the 171-session AUT study |
-| **[self-taught-operator](https://github.com/HoldenRichard/self-taught-operator)** | Continual-learning agent that teaches itself NandGame and compiles reusable skills | Python, Gemini Computer Use, Playwright, MongoDB Atlas, Voyage AI | Beat 5/5 tested levels across repeated loop runs (AIEWF Hackathon 2026) |
+- **[caselaw](https://github.com/HoldenRichard/caselaw)** [![npm](https://img.shields.io/npm/v/caselaw.svg?color=24292e&label=npm)](https://www.npmjs.com/package/caselaw): Zero-dependency CLI establishing repository verification guardrails enforced through Claude Code hooks. Rules cite incidents; machine gates support positive-control checks.
+- **[governance-research-regime](https://github.com/HoldenRichard/governance-research-regime)**: Logging protocol structuring session logs, defect ledgers, attestation registers, and CI integrity checks. Protocol powering the 171-session analysis snapshot and seven formal attestation promises.
+- **[self-taught-operator](https://github.com/HoldenRichard/self-taught-operator)**: Continual-learning agent that teaches itself NandGame and compiles reusable skills at runtime using Python, Gemini Computer Use, Playwright, MongoDB Atlas Vector Search, and Voyage AI. Beat 5/5 tested NandGame levels across repeated loop runs.
 
-### Shipped Software & Systems
+### Software & Systems
 
-| Project | Focus | Stack | Proof / Signal |
-| :--- | :--- | :--- | :--- |
-| **[Kabu](https://github.com/HoldenRichard/Kabu)** | iOS investing education app case study and multi-agent engineering workflow | Swift, SwiftUI, Firebase, StoreKit 2 | 30+ TestFlight testers; App Store submission ([learnkabu.com](https://www.learnkabu.com/)) |
-| **[LoanLens](https://github.com/HoldenRichard/LoanLens)** | Student loan analytics modeling real repayment and interest trajectories | Python, FastAPI, Kinde OAuth (2FA) | 1st in Fintech, 2nd Overall at UVM SWICS Hackathon (under 48 hrs) |
-| **[TradeSim](https://github.com/HoldenRichard/TradeSim)** | Real-time 3D stock-trading simulator and market visualizer | C++, OpenGL, ImGui | Custom 3D rendering engine built prior to iOS transition |
-| **[sms-enforcer-public](https://github.com/HoldenRichard/sms-enforcer-public)** | Event-sourced SMS lead-response SaaS for home-service businesses | Python, FastAPI, PostgreSQL, Redis | Outbox pattern, idempotent message dispatch, webhook lifecycle |
+- **[Kabu](https://github.com/HoldenRichard/Kabu)**: Solo-built iOS financial literacy app featuring quiz-gated lessons and real-time paper trading. Public architecture case study and multi-agent build workflow on GitHub; app beta on TestFlight.
+- **[LoanLens](https://github.com/HoldenRichard/LoanLens)**: Student loan analytics platform built in under 48 hours to model real repayment and interest trajectories. First in Fintech and second overall at the UVM SWICS Hackathon.
+- **[TradeSim](https://github.com/HoldenRichard/TradeSim)**: Real-time 3D stock-trading simulator built in C++ and OpenGL prior to the iOS transition. Interactive OpenGL candlestick renderer and polymorphic order system.
+- **[sms-enforcer-public](https://github.com/HoldenRichard/sms-enforcer-public)**: Event-sourced SMS lead-response system designed for home-service businesses. Implements an outbox pattern, idempotent message dispatch, and webhook lifecycle handling.
 
 ---
 
 ### Stack & Credentials
 
 - **Languages:** Swift, Python, TypeScript, JavaScript, C++, SQL
-- **Frameworks & Data:** SwiftUI, FastAPI, Flask, React, Next.js, PostgreSQL, Cloud Firestore, Redis, SQLite
-- **Infra, Security & AI:** Docker, GitHub Actions, Firebase Cloud Functions, OAuth/JWT, App Attest, Claude Code, Gemini Computer Use
-- **Certifications:** 6x Claude Academy Certifications (Anthropic)
+- **Frameworks & Data:** SwiftUI, FastAPI, Flask, React, Next.js, PostgreSQL, Cloud Firestore, Redis, SQLite, MongoDB Atlas Vector Search
+- **Infra, Security & AI:** Docker, GitHub Actions, Firebase Cloud Functions, OAuth/JWT, App Attest, Claude Code, Gemini Computer Use, Voyage AI
+- **Credentials:** Six Anthropic Academy course certificates
 
 ---
 
